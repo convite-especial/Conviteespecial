@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elaine Pamela & Maicon — Nosso Casamento</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="floral-decoration top-left">
+    <svg width="250" height="250" viewBox="0 0 200 200">
+      <g transform="translate(10,10)">
+        <path d="M50 150 C 80 100, 100 80, 150 50" fill="none" stroke="var(--leaf-light)" stroke-width="2"/>
+        <circle cx="60" cy="140" r="15" fill="var(--rose-dark)"/>
+        <circle cx="85" cy="120" r="20" fill="var(--rose-light)"/>
+        <circle cx="120" cy="90" r="18" fill="var(--rose-dark)"/>
+        <circle cx="140" cy="65" r="12" fill="var(--rose-light)"/>
+        <path d="M70 110 Q 50 90 70 70" fill="none" stroke="var(--leaf-dark)" stroke-width="3"/>
+        <path d="M100 100 Q 90 70 110 60" fill="none" stroke="var(--leaf-dark)" stroke-width="3"/>
+      </g>
+    </svg>
+  </div>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="title-block">
+        <p class="verse">“Para que todos vejam e saibam, considerem e juntamente entendam que a mão do SENHOR fez isso.”</p>
+        <p class="ref">Isaías 41:20</p>
+        <h1 class="names">Elaine Pamela <span>&amp;</span> Maicon</h1>
+      </div>
+    </header>
+
+    <section class="photo-section">
+      <div class="photo-frame">
+        <img src="IMG_20220611_180809.jpg" alt="Foto de Elaine e Maicon" id="heroPhoto">
+      </div>
+      <p class="verse-big">“Achei aquele a quem a minha alma ama.”<br><span class="ref-small">Cânticos 3:4</span></p>
+    </section>
+
+    <section class="message">
+      <h2>Nossa Celebração</h2>
+      <p>Com os corações cheios de alegria e gratidão, convidamos você para celebrar conosco o início da nossa nova vida. Sua presença é o presente mais importante para nós.</p>
+
+</a>
+    </section>
+
+    <footer class="footer">
+      <div class="monogram">E &amp; M</div>
+      <div class="details">
+        <p class="date"><strong>11 de Outubro de 2025</strong>, às <strong>10:00 horas</strong></p>
+        <p class="location">Cartório de Mandaguaçu</p>
+        /* --- Botão de Localização --- */
+<a href="https://maps.app.goo.gl/48gSHghKejKxZmb5A" target="_blank" class="map-button">
+  📍 Ver Localização
+</a>
+      </div>
+      
+    </footer>
+  </main>
+
+  <div class="floral-decoration bottom-right">
+      <svg width="250" height="250" viewBox="0 0 200 200">
+        <g transform="translate(10,10) scale(-1, -1) translate(-210, -210)">
+            <path d="M50 150 C 80 100, 100 80, 150 50" fill="none" stroke="var(--leaf-light)" stroke-width="2"/>
+            <circle cx="60" cy="140" r="15" fill="var(--rose-dark)"/>
+            <circle cx="85" cy="120" r="20" fill="var(--rose-light)"/>
+            <circle cx="120" cy="90" r="18" fill="var(--rose-dark)"/>
+            <circle cx="140" cy="65" r="12" fill="var(--rose-light)"/>
+            <path d="M70 110 Q 50 90 70 70" fill="none" stroke="var(--leaf-dark)" stroke-width="3"/>
+            <path d="M100 100 Q 90 70 110 60" fill="none" stroke="var(--leaf-dark)" stroke-width="3"/>
+          </g>
+      </svg>
+  </div>
+
+  <script>
+    // Script para caso a foto não seja encontrada
+    const img = document.getElementById('heroPhoto');
+    img.onerror = () => { 
+        img.style.display = 'none'; // Esconde a imagem se der erro
+        const frame = img.parentElement;
+        frame.innerHTML += '<p style="padding: 80px; text-align: center; color: #999;">Coloque sua foto em<br><strong>img/photo.jpg</strong></p>';
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* --- Paleta de Cores e Configurações Globais --- */
+:root {
+  --bg: #fdfaf6;
+  --paper: #ffffff;
+  --text-dark: #3a3532;
+  --text-muted: #6e6a66;
+  --leaf-dark: #6a7a63;
+  --leaf-light: #a6b1a0;
+  --rose-dark: #8a3d4d;
+  --rose-light: #e3c4c8;
+  --accent-gold: #c5a975;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', Georgia, serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* --- Layout Principal --- */
+.wrap {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--paper);
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Decorações Florais --- */
+.floral-decoration {
+  position: fixed;
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.floral-decoration.top-left { top: 0; left: 0; }
+.floral-decoration.bottom-right { bottom: -20px; right: 0; }
+
+
+/* --- Cabeçalho e Nomes --- */
+.hero {
+  padding: 60px 30px 40px;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0.9));
+}
+
+.verse, .ref {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.verse { font-size: 1.1em; max-width: 500px; margin: 0 auto 8px; }
+.ref { font-size: 0.8em; letter-spacing: 0.5px; }
+
+.names {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: var(--rose-dark);
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+.names span {
+  font-size: 0.7em;
+  color: var(--accent-gold);
+}
+
+/* --- Seção da Foto --- */
+.photo-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.photo-frame {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.photo-frame img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.verse-big {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.2em;
+}
+
+.ref-small {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  font-style: normal;
+  color: var(--leaf-dark);
+  font-size: 0.9em;
+}
+
+/* --- Mensagem e Rodapé --- */
+.message {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.message h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--leaf-dark);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: center;
+  background-color: #fcfaf8;
+}
+
+.monogram {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  font-family: 'Playfair Display', serif;
+  color: var(--rose-dark);
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.details p {
+  margin: 4px 0;
+  color: var(--text-muted);
+}
+.details .date {
+  font-size: 1.1em;
+}
+
+.note {
+  color: #aaa;
+  margin-top: 20px;
+  font-size: 0.8em;
+}
+
+/* --- Ajustes para Telas Pequenas (Responsivo) --- */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+  .wrap {
+    margin: 0 auto;
+  }
+  .hero {
+    padding: 40px 20px 30px;
+  }
+  .floral-decoration {
+    transform: scale(0.7);
+  }
+  .floral-decoration.top-left { top: -20px; left: -30px; }
+  .floral-decoration.bottom-right { bottom: -40px; right: -30px; }
+}
+
+/* --- Botão de Localização --- */
+.map-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--rose-dark);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.map-button:hover {
+  background: var(--rose-light);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+}
