@@ -152,16 +152,19 @@ body {
 }
 
 .monogram {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  line-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 2px solid var(--accent-gold);
   font-family: 'Playfair Display', serif;
   color: var(--rose-dark);
-  font-size: 1.4em;
-  margin-bottom: 20px;
+  font-size: 1.2em;
+  margin: 0 auto 20px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .details p {
