@@ -163,7 +163,7 @@ body {
   border: 2px solid var(--accent-gold);
   font-family: 'Playfair Display', serif;
   color: var(--rose-dark);
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 0 auto 20px;
   text-align: center;
   line-height: 100px; /* igual à altura para centralizar verticalmente */
