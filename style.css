@@ -232,3 +232,23 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.presente-emocional {
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  padding: 24px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #fff9f6 0%, #f6f6f6 100%);
+  box-shadow: 0 8px 24px rgba(138, 61, 77, 0.06);
+}
+
+.presente-emocional p {
+  color: var(--rose-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.07em;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.7;
+  opacity: 0.93;
+}
